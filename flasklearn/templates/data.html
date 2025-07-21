@@ -1,0 +1,10 @@
+{% for key,value in form_data.items() %}
+    {% if key=='name'%}
+    <div style="text-align:center;
+    font-family:'Times New Roman', Times, serif; font-size: 33px; margin-top: 300px;"><h1>Thanks for choosing us,{{value}}!</h1></div>
+    {%elif key=='email'%}
+    <p style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 35px;">We will notify you at {{value}} when the price drops to</p>
+    {%elif key!='url' and key!='name' and key!='email'%}
+    <p style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 35px;">₹ {{value}}</p>
+    {% endif %}
+{% endfor %}

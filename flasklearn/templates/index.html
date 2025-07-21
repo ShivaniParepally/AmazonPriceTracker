@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="login-container">
+        <h2>Track your deal!</h2>
+        <form class="login-form" action="/form" method="post">
+            <label for="URL">URL:</label>
+            <input type="url" id="url" name="url" placeholder="Enter the URL" required>
+    
+            <label for="Name:">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your E-mail Address" required>
+    
+            <label for="min-value">Target Value:</label>
+            <input type="number" id="min-value" name="min-value" min="0" step="1" required>
+            
+            <input type="submit" value="Notify Me">
+        </form>
+    </div>
+
+{% endblock %}
